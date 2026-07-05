@@ -16,7 +16,7 @@ p, section{
 
  	/* Customizing border */
  	border: outset;
- 	border-color: #8B4513;
+ 	border-color: #1B3B0A;
  	padding: 5px;
  	border-width: 4px;
  }
@@ -66,11 +66,16 @@ header h1{
 	/* Left-aligns the text */
 	text-align: left;
 
-	background-color: #CD853F;
-
 	font-family: 'Optima';
 
 
+}
+
+header h1 .headline-highlight {
+	background-color: #859F54;
+	padding: 0.12em 0.35em;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 
 header h2, h3{
@@ -148,7 +153,7 @@ p.chartWrapper {
 	max-width: 700px;
 
 	padding: 20px;
-	border: 5px double #CD853F;
+	border: 5px double #1B3B0A;
 }
 
 /* Twitter embed styles */
@@ -175,5 +180,69 @@ section.last{
 	text-align: right;
 	font-style: italic;
 	font-size: 12px;
+}
+
+/* Author footer styles */
+.author-footer {
+	width: 100%;
+	background-color: #1B3B0A;
+	margin-top: 50px;
+	padding: 32px 24px;
+	box-sizing: border-box;
+}
+
+.author-footer-inner {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.author-footer-photo {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	object-position: top;
+	flex-shrink: 0;
+	border-radius: 50%;
+	border: 3px solid #859F54 !important;
+	padding: 0 !important;
+}
+
+.author-footer-text {
+	color: #e8edd8;
+	font-family: Verdana, sans-serif;
+}
+
+.author-footer-label {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 10px;
+	color: #859F54;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.author-footer-text p {
+	max-width: none;
+	margin: 0 0 8px 0;
+	font-size: 13px;
+	line-height: 1.6;
+	color: #e8edd8;
+}
+
+.author-footer-links {
+	font-size: 12px;
+}
+
+.author-footer-links a {
+	color: #a8c472;
+}
+
+.author-footer-links a:hover {
+	background: transparent;
+	text-decoration: underline;
 }
 
