@@ -13,6 +13,7 @@ p, section{
  	/* Automatically resizes the images to fit the window width */
  	max-width: 100%;
  	height: auto;
+ 	display: block;
 
  	/* Customizing border */
  	border: outset;
@@ -22,17 +23,17 @@ p, section{
  }
 
  /* Link styles */
-a{
-	color: #478bb8;
-}
-
-a:hover{
- 	background: #e6e6e6;
+ a{
+ 	color: #478bb8;
+ }
+ 
+ a:hover{
+  	background: #e6e6e6;
  }
 
 /* Adding padding to the top of the article */
  p.ex1 {
-  		padding-top: 25px;
+   		padding-top: 25px;
 }
 
  
@@ -40,7 +41,7 @@ a:hover{
  body{
 
  	/* Sets the font family for the body*/
-	font-family: 'Georgia', sans-serif;
+ 	font-family: 'Georgia', sans-serif;
  }
 
 /* Header styles */
@@ -127,11 +128,11 @@ figure.banner{
  	/* Sets the font size for the caption text */
 	font-size: 12px;
 	
-	/* Centers the caption text */
-	text-align: right;
+ 	/* Centers the caption text */
+ 	text-align: right;
 
-	/* A margin-left of 20px helps the caption appear centered with the image even though it's technically a little shorter */
-	margin-left: 20px;
+ 	/* A margin-left of 20px helps the caption appear centered with the image even though it's technically a little shorter */
+ 	margin-left: 20px;
  }
 
  /* Styles for section headers */
@@ -246,16 +247,46 @@ section.last{
 	text-decoration: underline;
 }
 
+.photo-row {
+  max-width: 760px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
 #first_column,
 #second_column {
   width: 50%;
 }
 
-#first_column {
-  float:left;
+#first_column .banner,
+#second_column .banner {
+  display: block;
+  width: 100%;
+  margin: 0;
 }
 
-#first_column {
-  float:right;
+#first_column .banner img,
+#second_column .banner img {
+  width: 100%;
+  box-sizing: border-box;
 }
 
+#first_column .bannerCaption,
+#second_column .bannerCaption {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .photo-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #first_column,
+  #second_column {
+    width: 100%;
+  }
+}
