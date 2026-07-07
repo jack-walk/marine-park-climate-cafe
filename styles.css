@@ -246,3 +246,16 @@ section.last{
 	text-decoration: underline;
 }
 
+#first_column,
+#second_column {
+  width: 50%;
+}
+
+#first_column {
+  float:left;
+}
+
+#first_column {
+  float:right;
+}
+
