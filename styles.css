@@ -13,7 +13,6 @@ p, section{
  	/* Automatically resizes the images to fit the window width */
  	max-width: 100%;
  	height: auto;
- 	display: block;
 
  	/* Customizing border */
  	border: outset;
@@ -257,12 +256,12 @@ section.last{
 
 #first_column,
 #second_column {
-  width: 50%;
+  width: calc(50% - 10px);
 }
 
 #first_column .banner,
 #second_column .banner {
-  display: block;
+  display: inline-block;
   width: 100%;
   margin: 0;
 }
@@ -270,13 +269,17 @@ section.last{
 #first_column .banner img,
 #second_column .banner img {
   width: 100%;
-  box-sizing: border-box;
+  height: auto;
 }
 
 #first_column .bannerCaption,
 #second_column .bannerCaption {
+  display: block;
   width: 100%;
+  margin-left: 0;
+  padding-right: 2px;
   box-sizing: border-box;
+  text-align: right;
 }
 
 @media (max-width: 700px) {
